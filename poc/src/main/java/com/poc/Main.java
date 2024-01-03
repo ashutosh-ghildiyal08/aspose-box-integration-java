@@ -16,7 +16,7 @@ public class Main {
 
     static String templateFolderId = null;
     static String resultFilesFolderId = null;
-    static BoxAPIConnection api = new BoxAPIConnection("qMpHxyrlJzCUGZHJHb28qhhiZSzufqGw");
+    static BoxAPIConnection api = new BoxAPIConnection("b9hKufVi9I78RNcITK52RR11B75VkfUC");
 
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -64,7 +64,7 @@ public class Main {
 
     public static void downloadFile(BoxAPIConnection api, String fileId, String fileName) {
         // Specify the local path where you want to save the downloaded file
-        String folderPath = "Files/" + fileName;
+        String folderPath = "poc/Files/" + fileName;
 
         try {
             // Get information about the file
@@ -142,8 +142,8 @@ public class Main {
             String[] stringSplit = fileName.split("\\.");
             System.out.println(Arrays.toString(stringSplit));
 
-            String pdfPath = "Results/PDF/" + stringSplit[0] + ".pdf";
-            String wordPath = "Results/WORD/" + stringSplit[0] + ".docx";
+            String pdfPath = "poc/Results/PDF/" + stringSplit[0] + ".pdf";
+            String wordPath = "poc/Results/WORD/" + stringSplit[0] + ".docx";
 
             // Save the document
             doc.save(pdfPath, SaveFormat.PDF);
